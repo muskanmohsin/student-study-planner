@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">STUDENT TOOLKIT</p>
+      <h1>📚 Student Study Planner</h1>
+      <p class="subtitle">Plan your tasks, focus on your goals, and celebrate every small step.</p>
+    </header>
+
+    <section class="card">
+      <h2>➕ Add a study task</h2>
+      <form id="task-form">
+        <label for="task">Task name</label>
+        <input id="task" type="text" placeholder="e.g. Revise Mathematics" required maxlength="100">
+        <div class="form-row">
+          <div>
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" placeholder="e.g. Maths" maxlength="50">
+          </div>
+          <div>
+            <label for="date">Due date</label>
+            <input id="date" type="date">
+          </div>
+        </div>
+        <button type="submit">Add task</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="list-heading">
+        <h2>📝 My study tasks</h2>
+        <span id="task-count" class="count">0 tasks</span>
+      </div>
+      <p id="empty-state" class="empty">Your plan is empty. Add your first task above!</p>
+      <ul id="task-list" aria-live="polite"></ul>
+      <button id="clear-completed" class="secondary" type="button">Clear completed tasks</button>
+    </section>
+
+    <footer>Made for students • Your tasks are saved in this browser.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
